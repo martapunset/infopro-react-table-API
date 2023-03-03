@@ -1,5 +1,6 @@
 const mysql = require('mysql');
 const { CONFIG } = require("./config/config.js");
+
 const connection = mysql.createConnection({
   host: CONFIG.development.db.DB_IP,
   user: CONFIG.development.db.DB_USER ,// Replace with your MySQL username
@@ -19,4 +20,4 @@ function connect() {
   
 }
 
-module.exports = connect;
+module.exports = { connect }
