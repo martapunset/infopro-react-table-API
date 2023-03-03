@@ -1,10 +1,10 @@
-const { connect } = require("./src/db.js");
+//const { connect } = require("./src/db.js");
 const app = require("./src/app");
 const { CONFIG } = require("./src/config/config.js");
 
 const startServer = async () => {
   try {
-  connect(CONFIG.development.logger.info("MongoDB connected"));
+  //connect(CONFIG.development.logger.info("MongoDB connected"));
     app.listen(CONFIG.development.app.PORT, () => {
         CONFIG.development.logger.info(`Server is running in port ${ CONFIG.development.app.PORT}`);
     });
